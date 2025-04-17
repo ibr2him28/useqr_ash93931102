@@ -1,0 +1,36 @@
+.layout {
+    --layout-left: 230px;
+    --layout-top: 90px;
+    --layout-logo: 48px;
+    @include md {
+        --layout-left: 200px;
+    }
+    @include sm {
+        --layout-left: 0px;
+        --layout-top: 74px;
+    }
+    &-left {
+        @include sm {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9;
+            --layout-left: 300px;
+            box-shadow: 0 10px 50px rgba($color: #F0F1F4, $alpha: 1);
+            transform: translateX(-100%);
+            @include transition;
+            &.menu-show {
+                transform: translateX(0);
+            }
+        }
+    }
+    &-menu {
+        & a {
+            &.active,
+            &:hover {
+                background-color: $primary;
+                color: $white;
+            }
+        }
+    }
+}

@@ -1,0 +1,94 @@
+// setting page
+.setting {
+    table {
+        & tr {
+            &:last-child {
+                border-bottom: 0 !important;
+            }
+        }
+        & th,
+        td {
+            @include sm {
+                max-width: max-content;
+                padding: 12px;
+            }
+        }
+        & th {
+            &:last-child {
+                text-align: right;
+                .rtl & {
+                    text-align: left;
+                }
+                @include sm {
+                    padding: 12px 0 !important;
+                }
+            }
+        }
+        & td {
+            padding: 16px;
+            @include sm {
+                padding: 12px;
+            }
+        }
+        & td {
+            &:last-child {
+                text-align: end;
+            }
+        }
+    }
+}
+
+.cars {
+    & td {
+        color: #03070A;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: normal;
+        @include lg {
+            font-size: 14px;
+        }
+        @include md {
+            font-size: 14px;
+        }
+        & span {
+            @include lg {
+                font-size: 14px;
+                padding: 4px 10px;
+            }
+            @include md {
+                font-size: 14px;
+                padding: 4px 10px;
+            }
+        }
+        &:last-child {
+            & button {
+                color: #9B9DA0;
+                font-size: 22px;
+                &:hover {
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
+
+// dashboard
+.doughnut {
+    &-value {
+        &-1 {
+            top: 50%;
+            transform: translateY(-50%);
+            left: calc(100% - var(--left, 20px));
+        }
+        &-2 {
+            top: calc(100% - var(--top, 36%));
+            margin-left: -10px;
+            left: 0;
+        }
+        &-3 {
+            bottom: calc(100% - var(--bottom, 19%));
+            margin-left: 24px;
+            left: 0;
+        }
+    }
+}

@@ -1,0 +1,79 @@
+/* Date Picker Custom Styles */
+.react-datepicker {
+    font-family: inherit;
+    border-radius: 0.5rem;
+    border: none;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.react-datepicker__header {
+    background-color: white;
+    border-bottom: 1px solid #e5e7eb;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--in-range {
+    background-color: #1F547C !important;
+    color: white !important;
+}
+
+.react-datepicker__day--in-selecting-range {
+    background-color: rgba(31, 84, 124, 0.5) !important;
+}
+
+.react-datepicker__day:hover {
+    background-color: #e5e7eb !important;
+}
+
+.react-datepicker__day--keyboard-selected {
+    background-color: rgba(31, 84, 124, 0.1) !important;
+    color: #1F547C !important;
+}
+
+.react-datepicker__navigation {
+    top: 0.5rem;
+}
+
+.react-datepicker__month-select,
+.react-datepicker__year-select {
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    border: 1px solid #e5e7eb;
+}
+
+/* Add these styles for the shimmer effect */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-pulse > * {
+    background: linear-gradient(
+        90deg,
+        rgba(156, 163, 175, 0.1) 25%,
+        rgba(156, 163, 175, 0.2) 37%,
+        rgba(156, 163, 175, 0.1) 63%
+    );
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite linear;
+} 
+
+@keyframes shimmerDashboardCars {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }

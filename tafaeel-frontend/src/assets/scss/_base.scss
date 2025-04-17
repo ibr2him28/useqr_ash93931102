@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+// 
+body {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: calc(26px/16px);
+    color: $text;
+    font-family: $font-1;
+    background-color: $bg;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $heading;
+}
+
+p {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none !important;
+    @include transition;
+}
+
+input,
+textarea,
+button {
+    padding: 10px 25px;
+    border: 1px solid $border;
+    outline: none;
+    @include transition;
+    &:focus {
+        outline: none;
+        border-color: $primary;
+    }
+}
+
+
+/*Hide number spin button*/
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: $primary;
+    border-radius: 40px;
+    color: $white;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    @include sm {}
+    &:hover {
+        background-color: $secondary !important;
+    }
+}
+
+input[type="checkbox"] {
+    position: relative;
+    top: 2px;
+    --size: 19px;
+    width: var(--size);
+    height: var(--size);
+    border: 1px solid #D5D6D9;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    border-radius: 5px;
+    @include transition;
+    padding: 0 !important;
+    @include sm {
+        top: 0;
+    }
+}
+
+input:checked[type="checkbox"] {
+    background-image: url(../img/checked.png);
+    background-size: 100% 100%;
+    border: 0;
+}
+
+#root {
+    overflow: hidden;
+}
+
+.overflow-auto {
+    @include custom-scroll(6px)
+}
